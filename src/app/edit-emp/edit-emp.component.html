@@ -1,0 +1,43 @@
+<div class="container">
+    <form [formGroup]="myForm">
+        <div class="row mx-md-5">
+            <div class="col-12 col-lg-6">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="name" class="form-control" id="name" formControlName="name">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="address" class="form-control" id="address" formControlName="address">
+                </div>
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <input type="role" class="form-control" id="role" formControlName="role">
+                </div>
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <input type="department" class="form-control" id="department" formControlName="department">
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="form-group">
+                    <label for="skillsets">skillsets</label>
+                    <input type="skillsets" class="form-control" id="skillsets" formControlName="skillsets">
+                </div>
+                <div class="form-group">
+                    <label for="dateOfBirth">dateOfBirth</label>
+                    <input type="dateOfBirth" class="form-control" id="dateOfBirth" formControlName="dateOfBirth">
+                </div>
+                <div class="form-group">
+                    <label for="dateOfJoining">Date of Joining</label>
+                    <input type="dateOfJoining" class="form-control" id="dateOfJoining" formControlName="dateOfJoining">
+                </div>
+                <div class="form-group">
+                    <label for="isActive">isActive</label>
+                    <input type="isActive" class="form-control" id="isActive" formControlName="isActive">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="onUpdate()">Update</button>
+        </div>
+    </form>
+</div>

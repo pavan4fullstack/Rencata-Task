@@ -1,0 +1,11 @@
+.form-control {
+    width: 300px;
+}
+
+.flex {
+    display: flex;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}

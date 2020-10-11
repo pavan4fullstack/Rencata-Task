@@ -1,0 +1,39 @@
+<!-- <div class="flex">
+    <input [(ngModel)]="searchText" placeholder="search text goes here">
+    <button class="btn btn-primary" (click)="addEmployee()">Add Employee</button>
+</div> -->
+<div class="clearfix">
+    <button class="btn btn-primary float-left" (click)="addEmployee()">Add Employee</button>
+    <input class="float-right" [(ngModel)]="searchText" placeholder="search by name">
+</div>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Role</th>
+        <th scope="col">Department</th>
+        <th scope="col">Skillsets</th>
+        <th scope="col">Date Of Birth</th>
+        <th scope="col">Date Of Joining</th>
+        <th scope="col">isActive</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let data of rowData | filter : searchText;let i = index">
+          <td>{{data.name}}</td>
+          <td>{{data.address}}</td>
+          <td>{{data.role}}</td>
+          <td>{{data.department}}</td>
+          <td>{{data.skillsets}}</td>
+          <td>{{data.dateOfBirth}}</td>
+          <td>{{data.dateOfJoining}}</td>
+          <td>{{data.isActive}}</td>
+          <td *ngIf="data.name">
+              <button class="btn btn-primary mr-10" (click)="editEmployee(i)">Edit</button>
+              <button class="btn btn-primary" (click)="deleteEmployee(i)">Delete</button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
